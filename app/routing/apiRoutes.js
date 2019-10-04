@@ -9,10 +9,12 @@ module.exports = function(app) {
         var newUser = req.body;
 
         // Finds the best match out of all users
+
         // Defaults bestMatch to first user
         var bestMatch = users[0];
         // Defaults bestMatchDiff to 50 since 50 is the worst match score
         var bestMatchDiff = 50;
+
         for (var i = 0; i < users.length; i++) {
             var sum = 0;
             for (var j = 0; j < 10; j++) {
