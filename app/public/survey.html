@@ -197,8 +197,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Name: <span id="best-match-name"></span></p>
-                        <p>Image: <span id="best-match-photo"></span></p>
+                        <h1><span id="best-match-name"></span></h1>
+                        <img id="best-match-photo" style="height: 200px" src="">
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -234,7 +234,7 @@
                 function(data) {
                     console.log(data);
                     $("#best-match-name").text(data.name);
-                    $("#best-match-photo").text(data.photo);
+                    $("#best-match-photo").attr("src", data.photo);
                 });
 
         });

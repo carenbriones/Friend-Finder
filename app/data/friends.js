@@ -1,16 +1,16 @@
 var users = [{
         name: "Caren",
-        photo: "img.link",
-        scores: ["1", "2", "3", "1", "2", "3", "1", "2", "3", "1"]
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1280px-SNice.svg.png",
+        scores: ["4", "3", "4", "3", "5", "1", "2", "3", "4", "2"]
     },
     {
         name: "Frank",
-        photo: "photo",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1280px-SNice.svg.png",
         scores: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1"]
     },
     {
         name: "Charlie",
-        photo: "photo",
+        photo: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SNice.svg/1280px-SNice.svg.png",
         scores: ["2", "2", "2", "2", "2", "2", "2", "2", "2", "2"]
     }
 ]
