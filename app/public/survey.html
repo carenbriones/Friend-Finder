@@ -208,6 +208,7 @@
                     <div class="modal-body">
                         <h1><span id="best-match-name"></span></h1>
                         <img id="best-match-photo" style="height: 200px" src="">
+                        <h2>Compatibility: <span id="best-match-percentage"></span>%</h2>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -227,7 +228,7 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        Please fill out all questions and fieldsbefore submitting the survey.
+                        Please fill out all questions and fields before submitting the survey.
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -276,8 +277,9 @@
                 $.post("/api/friends", newUser,
                     function(data) {
                         console.log(data);
-                        $("#best-match-name").text(data.name);
-                        $("#best-match-photo").attr("src", data.photo);
+                        $("#best-match-name").text(data.bestMatch.name);
+                        $("#best-match-photo").attr("src", data.bestMatch.photo);
+                        $("#best-match-percentage").text(data.percent.toFixed(2));
                         $("#matchModal").modal("show");
                     });
             } else { // Else, survey is incomplete; shows warning

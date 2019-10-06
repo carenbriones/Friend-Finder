@@ -14,6 +14,7 @@ module.exports = function(app) {
         var bestMatch = users[0];
         // Defaults bestMatchDiff to 40 since 40 is the worst match score
         var bestMatchDiff = 40;
+        var bestMatchPercentage = 0.00;
 
         // Loops through each user 
         for (var i = 0; i < users.length; i++) {
@@ -28,12 +29,15 @@ module.exports = function(app) {
             if (sum < bestMatchDiff) {
                 bestMatchDiff = sum;
                 bestMatch = users[i];
+
+                // Calculates compatibility percentage
+                bestMatchPercentage = (40.0 - bestMatchDiff) / 40.0 * 100.0;
             }
         }
 
         // Pushes newUser after bestMatch is found so newUser is not in list of users before test
         users.push(newUser);
 
-        res.json(bestMatch);
+        res.json({ bestMatch: bestMatch, percent: bestMatchPercentage });
     })
 }
