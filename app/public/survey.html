@@ -279,6 +279,7 @@
                         console.log(data);
                         $("#best-match-name").text(data.bestMatch.name);
                         $("#best-match-photo").attr("src", data.bestMatch.photo);
+                        $("#best-match-photo").attr("alt", data.bestMatch.name + "\'s self photo");
                         $("#best-match-percentage").text(data.percent.toFixed(2));
                         $("#matchModal").modal("show");
                     });
